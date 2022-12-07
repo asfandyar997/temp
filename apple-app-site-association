@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "9N5VUFZB62.uk.sportskins.app",
+                "paths": [ "/v1/magic-link/change-password", "/v1/magic-link/payment-success", "/v1/magic-link/*"]
+            }
+        ]
+    }
+}

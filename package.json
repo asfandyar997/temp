@@ -1,0 +1,46 @@
+{
+    "name": "SportSkins",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.10.5",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/plugin-proposal-export-namespace-from": "^7.10.4",
+        "@babel/plugin-proposal-throw-expressions": "^7.10.4",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@babel/polyfill": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "babel-loader": "^8.1.0",
+        "browser-sync": "^2.26.10",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean": "^0.4.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.7.0",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-minify-css": "^1.2.4",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-shell": "^0.8.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify": "^3.0.2",
+        "gulp-watch": "^5.0.1",
+        "terser-webpack-plugin": "^3.0.7",
+        "uglify-js": "^3.10.0",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-stream": "^5.2.1"
+    },
+    "jshintConfig": {
+        "esversion": 9
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

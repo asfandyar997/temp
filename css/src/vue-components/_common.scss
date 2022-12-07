@@ -1,0 +1,143 @@
+[v-cloak] > * {
+    display: none;
+}
+
+[v-cloak]::before {
+    content: 'We’re fetching your content…';
+}
+
+[v-cloak][no-content]::before {
+    content: '';
+}
+
+.vue-tooltip {
+    z-index: 9999;
+}
+
+.fade-fast-enter-active,
+.fade-fast-leave-active {
+    transition: opacity .25s;
+}
+
+.fade-fast-enter,
+.fade-fast-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.pretty-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #F5F5F5;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgba(102, 102, 102, .1);
+}
+
+.modal-internal-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+.snotifyToast__title {
+    font-size: .95em;
+}
+
+.snotifyToast__body {
+    font-size: .8em;
+}
+
+.snotifyToast__buttons button {
+    cursor: pointer;
+}
+
+.snotify-icon {
+    right: 20px;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.snotify-confirm {
+    background-color: #f44336;
+}
+
+.snotify-confirm .snotifyToast__progressBar {
+    background-color: #f44336;
+}
+
+.snotify-confirm .snotifyToast__progressBar__percentage {
+    background-color: #f1908e;
+}
+
+.vue-simple-suggest {
+    width: 30rem;
+
+    .suggestions {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% + 5px);
+        border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .14);
+        background-color: #fff;
+        opacity: 1;
+        z-index: 1000;
+
+        .suggest-item {
+            &.hover {
+                background-color: #2874D5 !important;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+.mx-datepicker {
+    display: inherit;
+
+    .date-input.is-invalid {
+        background-image: none;
+    }
+}
+
+label > small {
+    font-size: 94%;
+}
+
+.form-group {
+    .input-loader {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        background: var(--white);
+        opacity: 1;
+        font-size: 1.2em;
+    }
+
+    .is-invalid~.input-loader {
+        top: 41%;
+    }
+}

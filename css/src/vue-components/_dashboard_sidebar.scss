@@ -1,0 +1,169 @@
+/**
+ * Dashboard Sidebar component
+ */
+.v-dashboard-sidebar {
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.v-dashboard-sidebar .nav > li.active > a,
+.v-dashboard-sidebar .nav > li.active > a:focus,
+.v-dashboard-sidebar .nav > li.active > a:hover {
+
+}
+
+.v-dashboard-sidebar .logout {
+    margin-left: 5px;
+}
+
+.page-with-wide-sidebar.no-sidebar .sidebar,
+.page-with-wide-sidebar.no-sidebar .navbar-toggle {
+    display: none;
+}
+
+.page-with-wide-sidebar.no-sidebar > .content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.sidebar .nav > li.nav-profile .image img {
+    min-height: 40px;
+    min-width: 40px;
+}
+
+.v-dashboard-sidebar .nav .active .router-link-exact-active.router-link-active {
+    color: #fff;
+}
+
+.v-dashboard-sidebar .nav > li {
+    border-bottom: 3px solid transparent;
+}
+
+.v-dashboard-sidebar .nav > li.yellow {
+    border-left: 4px solid #ECCC69;
+}
+
+.v-dashboard-sidebar .nav > li.blue {
+    border-left: 4px solid #3681C2;
+}
+
+.v-dashboard-sidebar .nav > li.red {
+    border-left: 4px solid #E52337;
+}
+
+.v-dashboard-sidebar .nav > li.green {
+    border-left: 4px solid #00A651;
+}
+
+.v-dashboard-sidebar .nav > li > a {
+    cursor: pointer;
+}
+
+.v-dashboard-sidebar .nav > li > .sub-menu > li a {
+    padding-left: 33px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.v-dashboard-sidebar .nav > li > .sub-menu > li a > i {
+    margin-right: .6em;
+    width: 1.2em;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav li.has-sub > .sub-menu {
+    display: inline-block !important;
+    width: auto;
+    position: inherit;
+    padding: 0;
+    left: 0;
+    background: inherit;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li > .sub-menu > li a {
+    padding-left: 20px;
+    padding-right: 12px;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li > .sub-menu > li a > i {
+    font-size: 1.2em;
+    margin: 0;
+    padding-bottom: 7px;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li > .sub-menu > li a > span {
+    display: none;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .caret {
+    display: none;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li > a {
+    display: none;
+}
+
+.v-dashboard-sidebar .nav > li.nav-profile > a {
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    color: #fff;
+}
+
+.v-dashboard-sidebar .nav > li.nav-profile > a > * {
+    align-self: center;
+}
+
+.v-dashboard-sidebar .nav > li.nav-profile > a .image {
+    flex: 1;
+    flex-grow: 0;
+    min-width: 50px;
+    max-width: 50px;
+    margin: 0;
+}
+
+.v-dashboard-sidebar .nav > li.nav-profile > a .info {
+    padding-left: 1em;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li.nav-profile {
+    display: block;
+    padding: 5px;
+    background: transparent;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li.nav-profile .cover {
+    display: none;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li.nav-profile > a {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li.nav-profile > a .info {
+    display: none;
+}
+
+.page-sidebar-minified .v-dashboard-sidebar .nav > li.nav-profile > a .image {
+    min-width: 40px;
+    width: 40px;
+    padding: 0;
+    height: auto;
+    display: inline-block;
+    margin: 10px 0 0;
+}
+
+@media all and (max-width: 767px) {
+    .page-with-wide-sidebar .v-dashboard-sidebar.sidebar {
+        left: 0;
+        top: 52px;
+    }
+
+    .page-with-wide-sidebar.page-sidebar-minified:not(.page-with-right-sidebar) > .content {
+        margin-left: 60px !important;
+        margin-right: 0 !important;
+    }
+}

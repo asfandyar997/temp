@@ -1,0 +1,144 @@
+$color-value-type-bool: #0E9A00;
+$color-value-type-int: #16289c;
+$color-value-type-float: #0c199c;
+$color-value-type-string: #e01e5a;
+$color-value-type-json: #da8200;
+$color-value-type-html: #ad30c5;
+
+.v-settings {
+    .settings-table {
+        .vuetable-body {
+            tr {
+                .actions {
+                    width: 75px;
+                }
+
+                td.vuetable-td-group {
+                    width: 180px;
+                    font-weight: 600;
+                }
+
+                td.vuetable-td-key {
+                    width: 190px;
+                }
+
+                .value-col {
+                    display: flex;
+
+                    .type {
+                        color: #2A2A2A;
+                        background-color: #F5F5F5;
+                        border: 1px solid #DADADA;
+                        padding: 2px 5px;
+                        border-radius: 3px;
+                        font-weight: 500;
+                        font-size: 10px;
+                        margin-right: 1em;
+
+                        width: 47px;
+                        display: inline-block;
+                        text-align: center;
+
+                        &.BOOL {
+                            color: $color-value-type-bool;
+                            border-color: $color-value-type-bool;
+                        }
+
+                        &.INT {
+                            color: $color-value-type-int;
+                            border-color: $color-value-type-int;
+                        }
+
+                        &.FLOAT {
+                            color: $color-value-type-float;
+                            border-color: $color-value-type-float;
+                        }
+
+                        &.STRING {
+                            color: $color-value-type-string;
+                            border-color: $color-value-type-string;
+                        }
+
+                        &.JSON {
+                            color: $color-value-type-json;
+                            border-color: $color-value-type-json;
+                        }
+
+                        &.HTML {
+                            color: $color-value-type-html;
+                            border-color: $color-value-type-html;
+                        }
+                    }
+
+                    .value {
+                        font-weight: 500;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 150px;
+                        display: inline-block;
+                        text-overflow: ellipsis;
+                        flex-grow: 1;
+                    }
+                }
+
+                .vuetable-td-description {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+.v-setting {
+    .value-type {
+        border: 1px solid;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-weight: 500;
+        font-size: 10px;
+        width: 47px;
+        display: inline-block;
+        text-align: center;
+        margin-top: 7px;
+
+        &.BOOL {
+            color: $color-value-type-bool;
+            border-color: $color-value-type-bool;
+        }
+
+        &.INT {
+            color: $color-value-type-int;
+            border-color: $color-value-type-int;
+        }
+
+        &.FLOAT {
+            color: $color-value-type-float;
+            border-color: $color-value-type-float;
+        }
+
+        &.STRING {
+            color: $color-value-type-string;
+            border-color: $color-value-type-string;
+        }
+
+        &.JSON {
+            color: $color-value-type-json;
+            border-color: $color-value-type-json;
+        }
+
+        &.HTML {
+            color: $color-value-type-html;
+            border-color: $color-value-type-html;
+        }
+    }
+
+    .value-string-textarea {
+        height: 150px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .jsoneditor {
+        border-color: #d2d2d2;
+    }
+}

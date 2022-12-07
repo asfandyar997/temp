@@ -1,0 +1,86 @@
+@mixin background($color:rgba(#ccc, 1), $position: center, $size: cover, $repeat: no-repeat) {
+    background-color: $color;
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $size;
+}
+@mixin center($horizontal: true, $vertical: true) {
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    } @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+@mixin fittext($min-media: 200px, $max-media: 1400px, $min-font-size: 5em, $max-font-size: 50em, $media-increment: 100, $font-increment: 1.5, $ratio: 1, $round: false) {
+    $font-size: $min-font-size;
+    $media: $min-media;
+    @while ($media <= $max-media) and ($font-size <= $max-font-size) {
+
+        @media screen and (min-width: $media) {
+            font-size: $font-size;
+        }
+        $font-size: if($round, ceil(font-sizer($font-size, $font-increment, $ratio)), font-sizer($font-size, $font-increment, $ratio));
+        $media: $media + $media-increment;
+    }
+}
+@function font-sizer($fs, $fi, $ra) {
+    @return ($fs + $fi) * $ra;
+}
+
+@mixin truncate-single($truncate-boundary: 100%) {
+    display: block;
+    overflow: hidden;
+    max-width: $truncate-boundary;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin truncate($truncate-font-size:14px, $truncate-line-height:1.4, $truncate-lines-to-show: 2, $truncate-boundary:100%, $static-height: true) {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    max-width: $truncate-boundary;
+    text-overflow: ellipsis;
+    font-size: $truncate-font-size;
+    line-height: $truncate-line-height;
+    -webkit-line-clamp: $truncate-lines-to-show;
+    white-space: normal;
+
+    @if $static-height == true {
+        height: $truncate-font-size * $truncate-line-height * $truncate-lines-to-show !important;
+    }
+    @else {
+        max-height: $truncate-font-size * $truncate-line-height * $truncate-lines-to-show;
+    }
+}
+@function divideEscape0($a,$b){
+    @if ($b ==0){@return 0}
+    @return $a/$b;
+}
+@function getImagePositionFromSprite($iconName,$sprite-name,$columns,$rows){
+    $index: index($sprite-name,$iconName);
+    $row: ceil($index/$columns);
+    $column: $index % $columns;
+    @return percentage(divideEscape0(1,($columns - 1))*($column - 1)) percentage(divideEscape0(1,($rows - 1))*($row - 1));
+}
+
+@mixin backgroundImageBySprite($sprite,$name,$size){
+    background-image: url(map_get($sprite,url));
+    background-position: getImagePositionFromSprite(
+        $name,
+        map_get($sprite,names),
+        map_get($sprite,columns),
+        map_get($sprite,rows)
+        );
+    height: $size;
+    width: $size;
+    background-size: auto $size * (map_get($sprite,rows));
+}

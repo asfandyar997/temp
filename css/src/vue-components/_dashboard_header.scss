@@ -1,0 +1,36 @@
+/**
+ * Dashboard header component
+ */
+.v-dashboard-header {
+    .navbar-toggle {
+        cursor: pointer;
+    }
+
+    .navbar-nav {
+        .search {
+            top: 10px;
+
+            > i {
+                position: relative;
+                top: 8px;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        min-width: 260px;
+
+        .no-items {
+            padding: 15px 20px 0;
+            white-space: nowrap;
+            color: #aaa;
+            text-align: center;
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .v-dashboard-header .navbar-header {
+        border: 0;
+    }
+}

@@ -1,0 +1,27 @@
+.v-game-types {
+    .game-types-table {
+        .vuetable-col-id {
+            width: 65px;
+        }
+
+        .vuetable-col-active {
+            width: 100px;
+        }
+
+        .vuetable-col-opta_competition_id {
+            width: 160px;
+        }
+
+        .vuetable-body {
+            tr {
+                .actions {
+                    width: 75px;
+                }
+            }
+        }
+    }
+}
+
+.v-season {
+
+}

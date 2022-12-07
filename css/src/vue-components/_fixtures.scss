@@ -1,0 +1,44 @@
+.v-fixtures-table {
+    .api-driven-slot {
+        padding-left: 20px;
+
+        .api-driven {
+            color: lightgray;
+
+            &.active {
+                color: var(--green);
+            }
+        }
+    }
+}
+
+.v-fixtures-table-toolbar {
+    margin-bottom: 10px;
+}
+
+.v-fixture {
+    .input-score {
+        width: 50px;
+        text-align: center;
+        padding: 0;
+        position: absolute;
+        padding-left: 13px;
+        font-size: 1.5em;
+
+        &.home {
+            right: 0;
+        }
+
+        &.away {
+            left: 0;
+        }
+    }
+
+    .semicolon {
+        padding: 0 30px;
+    }
+
+    .info {
+        width: max-content;
+    }
+}

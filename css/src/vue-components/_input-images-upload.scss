@@ -1,0 +1,109 @@
+/**
+ * Input Images Upload component
+ */
+.v-input-images-upload {
+    .image {
+        height: 150px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .image.add {
+        background-image: url(/img/placeholder-image-add.png);
+        background-size: 50%;
+        cursor: pointer;
+    }
+
+
+    .image:hover .remove,
+    .image:hover .sorting {
+        display: block;
+    }
+
+    .image .remove {
+        color: #FFF;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: none;
+    }
+
+    .image .remove i {
+        margin-right: 0;
+    }
+
+    .image .remove:hover {
+        color: #fff;
+    }
+
+    .image.add.disabled {
+        background-image: none !important;
+    }
+
+    .image.add .input-file {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        cursor: pointer;
+        left: 0;
+        top: 0;
+    }
+
+    .image.add:not(.disabled):hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .2), 0 6px 6px rgba(0, 0, 0, .23)
+    }
+
+    .image.add p {
+        font-size: 1em;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image.add p.uploading {
+        margin: 0 auto;
+        font-size: 2.5em;
+        color: cadetblue;
+        position: relative;
+        top: 35%;
+    }
+
+    .sorting {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+    }
+
+    .sorting a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .sorting a i {
+        position: relative;
+        top: 1px;
+        margin: 0;
+    }
+
+    .sorting .sort-up,
+    .sorting .sort-down {
+        transform: rotate(90deg);
+    }
+
+    .sorting .sort-down {
+        margin-right: 0;
+    }
+
+    .btn-icon {
+        color: #fff;
+    }
+
+    .row:empty:last-child {
+        margin-bottom: 0 !important;
+    }
+}

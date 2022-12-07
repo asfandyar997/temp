@@ -1,0 +1,27 @@
+a:hover {
+    text-decoration: none;
+}
+
+label {
+    font-weight: 600;
+}
+
+.panel-footer > .alert {
+    margin-bottom: 0;
+}
+
+.btn > i {
+    margin-right: 5px;
+}
+
+.switcher label {
+    cursor: pointer;
+}
+
+.radio.radio-css label {
+    cursor: pointer;
+}
+
+.no-resize {
+    resize: none;
+}

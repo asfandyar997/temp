@@ -1,0 +1,24 @@
+.v-seasons {
+    .seasons-table {
+        .vuetable-col-sid {
+            width: 175px;
+        }
+
+        .vuetable-col-created,
+        .vuetable-col-modified {
+            width: 160px;
+        }
+
+        .vuetable-body {
+            tr {
+                .actions {
+                    width: 75px;
+                }
+            }
+        }
+    }
+}
+
+.v-season {
+
+}

@@ -1,0 +1,21 @@
+.v-teams {
+    .grid {
+        .vuetable-th-slot-logo {
+            text-align: center;
+        }
+
+        .vuetable-col-logo {
+            width: 110px;
+            padding: 8px 15px;
+        }
+
+        .vuetable-col-opta_uid {
+            width: 200px;
+        }
+
+        .vuetable-col-created,
+        .vuetable-col-modified {
+            width: 150px;
+        }
+    }
+}
